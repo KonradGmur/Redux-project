@@ -13,8 +13,12 @@ const mapStateToProps = (state, ownProps) => ({
   active: state.filter === ownProps.filter
 });
 
-const mapDispatchToProps = dispatch => ({
-  onClick: () => dispatch()
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onClick: () =>
+    dispatch({
+      type: "FILTER_TODO",
+      filter: ownProps.filter
+    })
 });
 
 export default connect(
