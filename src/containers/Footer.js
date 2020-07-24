@@ -1,11 +1,15 @@
 import React from "react";
+import FilterButton from "../components/FilterButton";
+import { AVAILABLE_FILTERS } from "../action/todo.actions";
 
 const Footer = () => {
   return (
     <footer>
-      <button>ALL</button>
-      <button>Active</button>
-      <button>Completed</button>
+      <FilterButton filter={AVAILABLE_FILTERS.SHOW_ALL}>ALL</FilterButton>
+      <FilterButton filter={AVAILABLE_FILTERS.SHOW_ACTIVE}>Active</FilterButton>
+      <FilterButton filter={AVAILABLE_FILTERS.SHOW_COMPLETE}>
+        Completed
+      </FilterButton>
     </footer>
   );
 };

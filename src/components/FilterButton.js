@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 const FilterButton = ({ onClick, children, active }) => {
   return (
@@ -7,4 +8,16 @@ const FilterButton = ({ onClick, children, active }) => {
     </button>
   );
 };
-export default FilterButton;
+
+const mapStateToProps = (state, ownProps) => ({
+  active: state.filter === ownProps.filter
+});
+
+const mapDispatchToProps = dispatch => ({
+  onClick: () => dispatch()
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FilterButton);
