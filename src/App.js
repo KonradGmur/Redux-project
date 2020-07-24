@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 import TodoList from "./containers/TodoList";
 import AddTodo from "./containers/TodoList";
+import Footer from "./containers/Footer";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
 
       <AddTodo />
       <TodoList />
+      <Footer />
     </div>
   );
 }
