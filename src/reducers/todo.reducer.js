@@ -11,11 +11,11 @@ const todos = (state = [], action) => {
       ];
     case "TOGGLE_TODO":
       return state.map(todo => {
-        const isToggleTodo = todo.id === action.id;
+        const isToggledTodo = todo.id === action.id;
 
         return {
           ...todo,
-          complete: isToggleTodo ? !todo.complete : todo.complete
+          complete: isToggledTodo ? !todo.complete : todo.complete
         };
       });
 
